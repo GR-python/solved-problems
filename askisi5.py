@@ -17,13 +17,13 @@ def repetition(p):
     except:
       pass
   c=list(zip(a,b))
-  for i in sorted(c, key=lambda item:item[1], reverse=True):
+  for i in sorted(c, key=lambda item:item[1]):
     print(i)
 
 """
 Να γραφεί πρόγραμμα, το οποίο διαβάζει από το πληκτρολόγιο ακεραίους αριθμούς 
 και εκτυπώνει τους αριθμούς και το πλήθος εμφάνισής τους 
-κατά αύξουσα σειρά πλήθους εμφανίσεων.  
+κατά φθίνουσα σειρά πλήθους εμφανίσεων.  
 """
 def repetition2():
   a=[]
