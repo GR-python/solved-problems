@@ -9,6 +9,7 @@ def protos(a):
   while counter*counter < a: 
     if a % counter == 0: 
       print (f"{a} is no prime number, because {a} = {counter} * {a/counter}" ) 
-      return 
+      return False
     counter += 1 
   print (f"{a} is a prime number")
+  return True
