@@ -16,8 +16,7 @@ def repetition(p):
         print('Ο αριθμός πρέπει να είναι μεταξύ 0-9')  
     except:
       pass
-  c=list(zip(a,b))
-  for i in sorted(c, key=lambda item:item[1]):
+  for i in sorted(zip(a,b), key=lambda item:item[1]):
     print(i)
 
 """
