@@ -1,6 +1,7 @@
 """
 Γράψτε πρόγραμμα, το οποίο θα δέχεται ως είσοδο έναν αριθμό
 και θα εκτυπώνει αν είναι πρώτος αριθμός ή όχι
+write a program that prints if a number is prime or not
 """
 
 def protos(a): 
