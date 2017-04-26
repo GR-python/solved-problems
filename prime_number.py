@@ -5,7 +5,9 @@ write a program that prints if a number is prime or not
 """
 
 def protos(a):
-  if a <=2 :
+  if a <2 :
+    return False
+  elif a==2:
     return True
   for i in range(2,int (math.sqrt(a)+1)):
     if not a%i:
