@@ -55,23 +55,33 @@ An object oriented approach
 
 class Ipallilos:
   ipalliloi=[]
-  def __init__(self, am, onoma, etisies_apodoxes):
-    self.am=am
-    self.onoma=onoma
+  a_is=[]
+  def __init__(self, a_i, etisies_apodoxes):
+    if a_i in type(self).a_is:
+      print ('Υπάρχει ήδη υπάλληλος με αριθμό {}'.format(a_i)) 
+      return
+    self.a_i=a_i
+    type(self).a_is.append(a_i)
     self.etisies_apodoxes=etisies_apodoxes
     self.upologise_foro()
     type(self).ipalliloi.append(self)
   def __repr__(self):
-    return "AM :{}, Ονοματεπώνυμο :{}".format(self.am, self.onoma)
+    return "Aριθμός υπαλλήλου :{}, Ετήσιες αποδοχές :{}".format(self.a_i, self.etisies_apodoxes)
   def upologise_foro(self):
     if self.etisies_apodoxes<=15000:
       self.foros=( 10/100)*self.etisies_apodoxes
     else:
       self.foros=((10/100)*15000)+(20/100)*(self.etisies_apodoxes-15000)
   @property
-  def arithmos(self):
-    return len(type(self.ipalliloi))
-  
-    
+  def kathares_apodoxes(self):
+    return self.etisies_apodoxes-self.foros
+  @classmethod
+  def print_foros(cls):
+    for i in cls.ipalliloi:
+      print(i.a_i, i.foros)
+  @classmethod
+  def print_misthos(cls):  
+    for i in cls.ipalliloi:
+      print(i.a_i, int(i.kathares_apodoxes/12))
     
   
