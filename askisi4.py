@@ -1,16 +1,16 @@
 """
-Γράψτε συνάρτηση σε γλώσσα προγραμματισμού python, η οποία παίρνει ως ορίσμα μία λίστα. 
+Γράψτε συνάρτηση, η οποία παίρνει ως ορίσμα μία λίστα. 
 Η συνάρτηση να επιστρέφει 1 αν η λίστα έχει την παρακάτω ιδιότητα: το 1ο στοιχείο της λίστας είναι ίσο με το τελευταίο, 
 το 2ο με το προτελευταίο κ.ο.κ. Αν η λίστα δεν έχει την παραπάνω ιδιότητα η συνάρτηση να επιστρέφει 0.
 """"
 
-def askisi4(a):
-  for i in range(len(a)):
-    if a[i]==a[len(a)-1-i]:
-      return 1
-  return 0
+def askisi4(lista):
+  for i in range(int(len(lista)/2)):
+    if lista[i]!=lista[-1-i]:
+      return 0
+  return 1
 
-def askisi4_v2(a):
-  if a==list(reversed(a)):
+def askisi4_v2(lista):
+  if lista==list(reversed(lista)):
     return 1
   return 0
