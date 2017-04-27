@@ -8,7 +8,7 @@ def askisi2(afm_last_digit):
     afm_last_digit_str=str(afm_last_digit)
     result=0
     for i in range(1,10):
-      result+=int((afm_last_digit_str)*i)#Δημιουργούμαι κάθε φορά το T[1-9] ως str και μετά το μετατρέπω σε int 
+      result+=int((afm_last_digit_str)*i)#Δημιουργούμε κάθε φορά το T[1-9] ως str και μετά το μετατρέπουμε σε int 
     return result
   else:
     return f'To {afm_last_digit} πρέπει να είναι αριθμός 0-9'
