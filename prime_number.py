@@ -1,7 +1,6 @@
 """
 Γράψτε πρόγραμμα, το οποίο θα δέχεται ως είσοδο έναν αριθμό
 και θα εκτυπώνει αν είναι πρώτος αριθμός ή όχι
-write a program that prints whether a number is prime or not
 """
 
 def protos(a):
@@ -11,7 +10,7 @@ def protos(a):
     return True
   for i in range(2,int (math.sqrt(a)+1)):
     if not a%i:
-      print (f"{a} is no prime number, because {a} = {i} * {a/i}" ) 
+      print ("{} is no prime number, because {} = {} * {}".format(a,a,i,a/i) ) 
       return False
-  print (f"{a} is a prime number")
+  print ("{} is a prime number".format(a))
   return True
