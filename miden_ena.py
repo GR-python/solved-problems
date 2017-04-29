@@ -41,3 +41,9 @@ def biggest_sequence():
     print("1's have the biggest sequence. Length : {}".format(max_1))
   else: 
     print("1's and 0's have the same biggest sequence. Length : {}".format(max_1))
+    
+    
+def biggest_sequence2():
+  sequence=input("Insert binary sequence : ")
+  winner=max(sequence.split('1')+ sequence.split('1'), key=len)
+  print("{}'s have the biggest sequence with length : {}".format(winner[0], len(winner)))
