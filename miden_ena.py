@@ -47,3 +47,10 @@ def biggest_sequence2():
   sequence=input("Insert binary sequence : ")
   winner=max(sequence.split('1')+ sequence.split('0'), key=len)
   print("{}'s have the biggest sequence with length : {}".format(winner[0], len(winner)))
+  
+  
+def biggest_sequence3():
+  import re
+  sequence=input("Insert binary sequence : ")
+  winner=max((re.findall('1+|0+', sequence)), key=len)
+  print("{}'s have the biggest sequence with length : {}".format(winner[0], len(winner)))
